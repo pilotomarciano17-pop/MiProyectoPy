@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil con Flask</title>
+</head>
+<body>
+    <h1>Perfil del Estudiante</h1>
+    
+    <!-- Imprimiendo variables y datos del diccionario -->
+    <p><strong>Nombre:</strong> {{ nombre }}</p>
+    <p><strong>Primer apellido:</strong> {{ apellidos.primer }}</p>
+    <p><strong>Segundo apellido:</strong> {{ apellidos.segundo }}</p>
+    
+    <hr>
+
+    <h2>Asignaturas</h2>
+    <ul>
+        <!-- Ciclo for en Jinja2 para las asignaturas -->
+        {% for asignatura in asignaturas %}
+            <li>{{ asignatura }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Hobbies</h2>
+    <ul>
+        <!-- Ciclo for en Jinja2 para los hobbies -->
+        {% for hobbie in hobbies %}
+            <li>{{ hobbie }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
